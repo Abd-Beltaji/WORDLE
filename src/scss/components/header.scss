@@ -1,0 +1,11 @@
+header {
+    @apply bg-[#0D1117];
+    @apply flex justify-between items-center h-16 px-3;
+
+    .logo {
+        @apply h-12 w-40;
+    }
+    .toggle{
+        transform: scale(0.8);
+    }
+}

@@ -1,12 +1,15 @@
-/* This example requires Tailwind CSS v2.0+ */
 import React, { useState } from 'react'
-import { Switch, Transition } from '@headlessui/react'
+import { Switch } from '@headlessui/react'
 import className from '@utils/className'
 import { MoonIcon as MoonOutlined } from '@heroicons/react/outline'
 import { MoonIcon as MoonSolid } from '@heroicons/react/solid'
+
+import { ReactComponent as Logo } from '@assets/images/logo.svg'
+import '@styles/components/header.scss'
 export default function Header() {
 	return (
 		<header>
+			<Logo className="logo" />
 			<ThemeToggle />
 		</header>
 	)
@@ -16,7 +19,7 @@ const ThemeToggle: React.FC = () => {
 	const [enabled, setEnabled] = useState(false)
 
 	return (
-		<div className="py-16">
+		<div className="toggle py-16">
 			<Switch
 				checked={enabled}
 				onChange={setEnabled}
@@ -28,7 +31,6 @@ const ThemeToggle: React.FC = () => {
 					'cursor-pointer',
 					'transition-colors ease-in-out duration-200',
 					'focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75',
-					'shadow-md shadow-slate-300'
 				)}
 			>
 				<span className="sr-only">Use setting</span>
