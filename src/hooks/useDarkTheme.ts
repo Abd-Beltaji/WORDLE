@@ -1,7 +1,9 @@
 import { useState } from 'react'
 
 export const useDarkTheme = () => {
-	const initialValue = localStorage.getItem('darkTheme') === 'true'
+	const localStorageValue = localStorage.getItem('darkTheme')
+	const prefered: boolean = window.matchMedia('(prefers-color-scheme: dark)').matches
+	const initialValue = localStorageValue === null ? prefered : localStorageValue === 'true'
 	const [darkMode, setDarkMode] = useState<boolean>(initialValue)
 	return [
 		darkMode,
