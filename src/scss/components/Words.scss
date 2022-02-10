@@ -1,0 +1,10 @@
+.words {
+    @apply h-full transition-all;
+    @apply flex items-center justify-center;
+    table{
+        @apply border-collapse ;
+        td, th{
+            @apply border-2 h-16 w-16 border-slate-800 dark:border-slate-400 text-center ;
+        }
+    }
+}

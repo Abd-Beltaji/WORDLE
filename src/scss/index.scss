@@ -9,3 +9,8 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+#root,
+.App {
+    @apply h-screen overflow-hidden;
+}
