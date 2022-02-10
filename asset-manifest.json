@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/WORDLE/static/css/main.deb12576.css",
-    "main.js": "/WORDLE/static/js/main.34cd0729.js",
+    "main.css": "/WORDLE/static/css/main.a5dd19de.css",
+    "main.js": "/WORDLE/static/js/main.413dbea7.js",
     "static/media/logo.svg": "/WORDLE/static/media/logo.effab8bf79667867e7958796717f9162.svg",
     "index.html": "/WORDLE/index.html",
-    "main.deb12576.css.map": "/WORDLE/static/css/main.deb12576.css.map",
-    "main.34cd0729.js.map": "/WORDLE/static/js/main.34cd0729.js.map"
+    "main.a5dd19de.css.map": "/WORDLE/static/css/main.a5dd19de.css.map",
+    "main.413dbea7.js.map": "/WORDLE/static/js/main.413dbea7.js.map"
   },
   "entrypoints": [
-    "static/css/main.deb12576.css",
-    "static/js/main.34cd0729.js"
+    "static/css/main.a5dd19de.css",
+    "static/js/main.413dbea7.js"
   ]
 }
