@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/WORLDE/static/css/main.deb12576.css",
-    "main.js": "/WORLDE/static/js/main.b652e4fd.js",
-    "static/media/logo.svg": "/WORLDE/static/media/logo.effab8bf79667867e7958796717f9162.svg",
-    "index.html": "/WORLDE/index.html",
-    "main.deb12576.css.map": "/WORLDE/static/css/main.deb12576.css.map",
-    "main.b652e4fd.js.map": "/WORLDE/static/js/main.b652e4fd.js.map"
+    "main.css": "/WORDLE/static/css/main.deb12576.css",
+    "main.js": "/WORDLE/static/js/main.34cd0729.js",
+    "static/media/logo.svg": "/WORDLE/static/media/logo.effab8bf79667867e7958796717f9162.svg",
+    "index.html": "/WORDLE/index.html",
+    "main.deb12576.css.map": "/WORDLE/static/css/main.deb12576.css.map",
+    "main.34cd0729.js.map": "/WORDLE/static/js/main.34cd0729.js.map"
   },
   "entrypoints": [
     "static/css/main.deb12576.css",
-    "static/js/main.b652e4fd.js"
+    "static/js/main.34cd0729.js"
   ]
 }
