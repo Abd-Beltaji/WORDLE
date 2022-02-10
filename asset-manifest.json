@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/WORLDE/static/css/main.deb12576.css",
+    "main.js": "/WORLDE/static/js/main.b652e4fd.js",
+    "static/media/logo.svg": "/WORLDE/static/media/logo.effab8bf79667867e7958796717f9162.svg",
+    "index.html": "/WORLDE/index.html",
+    "main.deb12576.css.map": "/WORLDE/static/css/main.deb12576.css.map",
+    "main.b652e4fd.js.map": "/WORLDE/static/js/main.b652e4fd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.deb12576.css",
+    "static/js/main.b652e4fd.js"
+  ]
+}
