@@ -16,7 +16,7 @@ export default function Header() {
 				<a href="#dummy">About</a>
 			</div>
 			<div className="flex">
-				<a href="#dummy">
+				<a href="https://twitter.com/Abd_Elbeltaji">
 					<FaTwitter />
 				</a>
 				<a href="#dummy">
