@@ -1,7 +1,8 @@
 header {
     @apply bg-[#0D1117];
     @apply flex justify-between items-center h-16 px-3;
-
+    @apply shadow-md;
+    @apply dark:bg-[#0D1117] bg-blue-600 transition-all;
     .logo {
         @apply h-12 w-40;
     }
@@ -12,7 +13,7 @@ header {
 
     .flex {
         @apply gap-6 items-center;
-        @apply text-white;
+        @apply dark:text-white text-slate-900;
 
         a {
             @apply hover:underline;

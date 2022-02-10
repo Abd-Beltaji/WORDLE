@@ -1,5 +1,5 @@
 // Essentials imports
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Switch } from '@headlessui/react'
 import className from '@utils/className'
 // Icons imports
@@ -11,7 +11,10 @@ import { ReactComponent as Logo } from '@assets/images/logo.svg'
 // Style imports
 import '@styles/components/header.scss'
 
-const Header: React.FC<{}> = () => {
+const Header: React.FC<{
+	darkTheme: boolean
+	setDarkTheme: (value?: boolean) => boolean
+}> = ({ darkTheme, setDarkTheme }) => {
 	return (
 		<header>
 			<div className="flex">
@@ -29,28 +32,33 @@ const Header: React.FC<{}> = () => {
 				<a href="https://github.com/Abd-Beltaji/WORDLE">
 					<AiFillGithub />
 				</a>
-				<ThemeToggle />
+				<ThemeToggle darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
 			</div>
 		</header>
 	)
 }
 
-const ThemeToggle: React.FC = () => {
-	const [enabled, setEnabled] = useState<boolean>(false)
-
+const ThemeToggle: React.FC<{
+	darkTheme: boolean
+	setDarkTheme: (value?: boolean) => boolean
+}> = ({ darkTheme, setDarkTheme }) => {
+	const [enabled, setEnabled] = useState<boolean>(darkTheme)
+	useEffect(() => {
+		setDarkTheme(enabled)
+	}, [enabled, setDarkTheme])
 	return (
 		<div className="toggle py-16">
 			<Switch
 				checked={enabled}
 				onChange={setEnabled}
 				className={className(
-					enabled ? `bg-teal-900` : `bg-gray-300`,
+					enabled ? `bg-blue-600` : `bg-gray-600`,
 					'relative inline-flex flex-shrink-0',
 					'h-[38px] w-[74px]',
 					'border-2 border-transparent rounded-full',
 					'cursor-pointer',
 					'transition-colors ease-in-out duration-200',
-					'focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75'
+					'focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75',
 				)}
 			>
 				<span className="sr-only">Use setting</span>
@@ -71,9 +79,9 @@ const ThemeToggle: React.FC = () => {
 					)}
 				>
 					{enabled ? (
-						<MoonSolid className={`text-teal-900 mx-auto w-[20px]`} />
+						<MoonSolid className={`text-blue-600 mx-auto w-[20px]`} />
 					) : (
-						<MoonOutlined className={`text-teal-700 mx-auto w-[20px]`} />
+						<MoonOutlined className={`text-blue-500 mx-auto w-[20px]`} />
 					)}
 				</span>
 			</Switch>
