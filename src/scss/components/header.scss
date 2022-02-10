@@ -5,7 +5,22 @@ header {
     .logo {
         @apply h-12 w-40;
     }
-    .toggle{
+
+    .toggle {
         transform: scale(0.8);
+    }
+
+    .flex {
+        @apply gap-6 items-center;
+        @apply text-white;
+
+        a {
+            @apply hover:underline;
+
+            svg{
+                @apply text-2xl;
+                @apply hover:text-gray-400;
+            }
+        }
     }
 }

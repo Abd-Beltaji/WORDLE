@@ -3,14 +3,30 @@ import { Switch } from '@headlessui/react'
 import className from '@utils/className'
 import { MoonIcon as MoonOutlined } from '@heroicons/react/outline'
 import { MoonIcon as MoonSolid } from '@heroicons/react/solid'
-
+import { AiFillGithub } from 'react-icons/ai'
+import { FaGitkraken, FaTwitter } from 'react-icons/fa'
 import { ReactComponent as Logo } from '@assets/images/logo.svg'
 import '@styles/components/header.scss'
 export default function Header() {
 	return (
 		<header>
-			<Logo className="logo" />
-			<ThemeToggle />
+			<div className="flex">
+				<Logo className="logo" />
+				<a href="#dummy">Play</a>
+				<a href="#dummy">About</a>
+			</div>
+			<div className="flex">
+				<a href="#dummy">
+					<FaTwitter />
+				</a>
+				<a href="#dummy">
+					<FaGitkraken />
+				</a>
+				<a href="https://github.com/Abd-Beltaji/WORDLE">
+					<AiFillGithub />
+				</a>
+				<ThemeToggle />
+			</div>
 		</header>
 	)
 }
@@ -30,7 +46,7 @@ const ThemeToggle: React.FC = () => {
 					'border-2 border-transparent rounded-full',
 					'cursor-pointer',
 					'transition-colors ease-in-out duration-200',
-					'focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75',
+					'focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75'
 				)}
 			>
 				<span className="sr-only">Use setting</span>
