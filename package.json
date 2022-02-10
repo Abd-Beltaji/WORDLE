@@ -1,7 +1,7 @@
 {
   "name": "wordle",
   "version": "0.1.0",
-  "homepage": "http://Abd-Beltaji.github.io/WORLDE",
+  "homepage": "https://abd-beltaji.github.io/WORDLE",
   "private": false,
   "license": "MIT",
   "dependencies": {
@@ -54,5 +54,9 @@
     "postcss-import": "^14.0.2",
     "postcss-scss": "^4.0.3",
     "sass": "^1.49.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abd-Beltaji/WORDLE.git"
   }
 }
