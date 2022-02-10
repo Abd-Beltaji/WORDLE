@@ -1,13 +1,17 @@
+// Essentials imports
 import React, { useState } from 'react'
 import { Switch } from '@headlessui/react'
 import className from '@utils/className'
+// Icons imports
 import { MoonIcon as MoonOutlined } from '@heroicons/react/outline'
 import { MoonIcon as MoonSolid } from '@heroicons/react/solid'
 import { AiFillGithub } from 'react-icons/ai'
 import { FaGitkraken, FaTwitter } from 'react-icons/fa'
 import { ReactComponent as Logo } from '@assets/images/logo.svg'
+// Style imports
 import '@styles/components/header.scss'
-export default function Header() {
+
+const Header: React.FC<{}> = () => {
 	return (
 		<header>
 			<div className="flex">
@@ -32,7 +36,7 @@ export default function Header() {
 }
 
 const ThemeToggle: React.FC = () => {
-	const [enabled, setEnabled] = useState(false)
+	const [enabled, setEnabled] = useState<boolean>(false)
 
 	return (
 		<div className="toggle py-16">
@@ -76,3 +80,4 @@ const ThemeToggle: React.FC = () => {
 		</div>
 	)
 }
+export default Header

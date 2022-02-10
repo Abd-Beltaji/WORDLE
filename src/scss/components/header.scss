@@ -17,10 +17,11 @@ header {
         a {
             @apply hover:underline;
 
-            svg{
+            svg {
                 @apply text-2xl;
                 @apply hover:text-gray-400;
             }
         }
+
     }
 }
