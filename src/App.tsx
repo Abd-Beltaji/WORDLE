@@ -1,21 +1,19 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Words from '@components/Words'
 import '@styles/index.scss'
 import Header from '@components/header'
 import { useDarkTheme } from '@hooks/useDarkTheme'
+import { WordsProvider } from '@hooks/useWords'
+
 const App: React.FC<{}> = () => {
-	const [clicked, setClicked] = useState<string>('')
 	const [darkTheme, setDarkTheme] = useDarkTheme()
-	useEffect(() => {
-		window.addEventListener('keydown', evt => {
-			if (/^[a-z]$/i.exec(evt.key)) setClicked(evt.key)
-		})
-	}, [])
+
 	return (
 		<div className={`App ${darkTheme ? 'dark' : 'light'}`}>
-			<Header darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
-			<Words />
-			{clicked}
+			<WordsProvider>
+				<Header darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
+				<Words />
+			</WordsProvider>
 		</div>
 	)
 }
