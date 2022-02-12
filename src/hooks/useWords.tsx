@@ -1,6 +1,6 @@
 import React, { createContext, useReducer } from 'react'
 import wordsList from '@assets/words.json'
-export const useWords = () => {}
+
 export const { words } = wordsList
 export enum WordsActionKind {
 	ADD = 'ADD_WORD',
